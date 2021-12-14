@@ -1,0 +1,15 @@
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -1,5 +1,6 @@
+ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+ moduledir = join_paths(pkgdatadir, 'siglo')
++pythondistdir = join_paths('/usr/lib/python3/dist-packages', meson.project_name())
+ gnome = import('gnome')
+ 
+ gnome.compile_resources('siglo',
+@@ -38,4 +39,4 @@
+   'ota/unpacker.py',
+ ]
+ 
+-install_data(siglo_sources, install_dir: moduledir)
++install_data(siglo_sources, install_dir: pythondistdir)

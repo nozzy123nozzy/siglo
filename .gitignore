@@ -1,0 +1,6 @@
+build.log
+siglo/
+siglo/*
+siglo-0.9.6/
+siglo-0.9.6/*
+siglo_*
